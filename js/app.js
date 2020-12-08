@@ -6,7 +6,7 @@ function getInitialConfig() {
   const speed = document.getElementById('speed').value;
   const angle = document.getElementById('angle').value;
   const mirrors = document.getElementById('mirrors').value;
-  return { velocity, angle, mirrors };
+  return { speed, angle, mirrors };
 }
 
 // Runs only once
