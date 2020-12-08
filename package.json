@@ -2,7 +2,7 @@
   "name": "mirror-room",
   "version": "0.1.0",
   "description": "Simulation of reflection in a mirror room",
-  "main": "app.js",
+  "main": "js/app.js",
   "scripts": {
     "start": "npx http-server"
   },
