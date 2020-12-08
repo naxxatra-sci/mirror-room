@@ -1,0 +1,11 @@
+{
+  "name": "mirror-room",
+  "version": "0.1.0",
+  "description": "Simulation of reflection in a mirror room",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx http-server"
+  },
+  "author": "Naxxatra Sciences and Collaborative Research",
+  "license": "ISC"
+}
