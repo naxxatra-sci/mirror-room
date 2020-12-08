@@ -7,6 +7,8 @@ class Mirror {
     this.points = [];
     this.startAngle = 360 / numSides; // angle of the first point from origin
     this.origin = origin;
+
+    this.getPoints();
   }
 
   // Get all the polygon points
