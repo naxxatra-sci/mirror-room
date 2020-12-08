@@ -3,6 +3,5 @@
 export const getPointsAtAngle = (srcPoint, angle, length) => {
   const x2 = srcPoint.x + cos(angle) * length;
   const y2 = srcPoint.y + sin(angle) * length;
-  console.log(srcPoint.x, srcPoint.y, angle, length);
   return createVector(x2, y2, angle);
 };

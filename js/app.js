@@ -11,12 +11,12 @@ function setup() {
   const origin = createVector(window.innerWidth / 2, window.innerHeight / 2);
 
   // Setup Mirrors
-  window.mirror = new Mirror(6, 400, origin);
+  window.mirror = new Mirror(6, 400, origin); // numSides, length, origin
   window.mirror.getPoints();
 
   // Setup Ball
   window.ball = new Ball(origin.x, origin.y);
-  ball.setDirection(0);
+  ball.setDirection(45); // angle
   ball.setSpeed();
 }
 
