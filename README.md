@@ -1,8 +1,11 @@
-#### Mirror Room Project by Naxxatra Sciences and Collaborative Research
+# Mirror Room Project by Naxxatra
 
-###### Project Description
+### Project Description
 
-###### Instructions
+To be filled...
+
+
+### Instructions
 
 Run any one of of these http servers:
 
