@@ -1,3 +1,12 @@
 body {
     overflow: hidden;
 }
+
+.controls-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.controls-container label {
+    font-weight: bold;
+}

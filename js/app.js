@@ -1,22 +1,33 @@
 import Ball from './ball.js';
 import Mirror from './mirror.js';
 
+// Get Initial Values
+function getInitialConfig() {
+  const velocity = document.getElementById('speed').value;
+  const angle = document.getElementById('angle').value;
+  const mirrors = document.getElementById('mirrors').value;
+  return { velocity, angle, mirrors };
+}
+
 // Runs only once
 function setup() {
   // Setup canvas
   createCanvas(window.innerWidth, window.innerHeight);
   angleMode(DEGREES);
 
+  // Get initial values
+  const initialConfig = getInitialConfig();
+
   // Set origin at the center
   const origin = createVector(window.innerWidth / 2, window.innerHeight / 2);
 
   // Setup Mirrors
-  window.mirror = new Mirror(6, 400, origin); // numSides, length, origin
+  window.mirror = new Mirror(initialConfig.mirrors, 400, origin); // numSides, length, origin
 
   // Setup Ball
   window.ball = new Ball(origin.x, origin.y);
-  ball.setDirection(45); // angle
-  ball.setSpeed();
+  ball.setDirection(initialConfig.angle); // angle
+  ball.setSpeed(initialConfig.speed);
 }
 
 // Runs in loop

@@ -18,8 +18,19 @@ class Ball extends p5.Vector {
   }
 
   setSpeed(speed = 1) {
+    this.speed = speed;
     this.xVelocity = this.direction.x * speed;
     this.yVelocity = this.direction.y * speed;
+  }
+
+  // Event listener
+  onSpeedChange(event) {
+    this.setSpeed(event.target.value);
+  }
+
+  onAngleChange(event) {
+    this.setDirection(event.target.value);
+    this.setSpeed(this.speed);
   }
 
   move() {

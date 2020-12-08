@@ -6,7 +6,24 @@
         <script type="module" src="js/app.js"> </script>
     </head>
     <body>
-    <main>
-    </main>
+        <form class="controls-container" onsubmit="return false">
+            <div class="speed-input-container">
+                <label for="speed">Speed:</label>
+                <input id="speed" name="speed" type="number" min="1" max="10" onchange="ball.onSpeedChange(event)" value="1">
+            </div>
+            <div class="mirror-input-container">
+                <label for="mirrors">Number of Mirrors:</label>
+                <input id="mirrors" name="mirrors" type="number" min="3" max="10" onchange="mirror.onNumSidesChange(event)" value="6">
+            </div>
+            <div class="angle-input-container">
+                <label for="angle">Initial Angle:</label>
+                <input id="angle" name="angle" type="number" min="-360" max="360" onchange="ball.onAngleChange(event)" value="60">
+            </div>
+            <div>
+                <button onclick="window.setup()">Reset</button>
+            </div>
+        </form>
+        <main>
+        </main>
     </body>
 </html>
