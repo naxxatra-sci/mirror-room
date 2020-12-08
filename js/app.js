@@ -3,7 +3,7 @@ import Mirror from './mirror.js';
 
 // Get Initial Values
 function getInitialConfig() {
-  const velocity = document.getElementById('speed').value;
+  const speed = document.getElementById('speed').value;
   const angle = document.getElementById('angle').value;
   const mirrors = document.getElementById('mirrors').value;
   return { velocity, angle, mirrors };
