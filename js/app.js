@@ -12,7 +12,7 @@ function setup() {
 
   // Setup Mirrors
   window.mirror = new Mirror(6, 400, origin); // numSides, length, origin
-  window.mirror.getPoints();
+  mirror.getPoints();
 
   // Setup Ball
   window.ball = new Ball(origin.x, origin.y);
@@ -23,8 +23,8 @@ function setup() {
 // Runs in loop
 function draw() {
   clear();
-  window.mirror.draw();
-  window.ball.move();
+  mirror.draw();
+  ball.move();
 }
 
 window.setup = setup;
