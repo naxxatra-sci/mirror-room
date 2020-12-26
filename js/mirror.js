@@ -7,6 +7,7 @@ class Mirror {
     this.origin = origin;
 
     this.getPoints();
+    this.getLines();
   }
 
   // Get all the polygon points
@@ -23,11 +24,29 @@ class Mirror {
     }
   }
 
+  //get line equations slope and y-intercept (y=mx+c)
+  getLines(){
+    this.lines = [];
+    this.getPoints();
+    for (let i = 0; i < this.points.length - 1; i++) {
+      const pointA = this.points[i];
+      const pointB = this.points[i + 1];
+      let slope=(pointB.y-pointA.y)/(pointB.x-pointA.x);
+      let intercept=pointA.y-slope*pointA.x;
+      this.lines.push({
+        slope,
+        intercept,
+      })
+    }
+    return this.lines;
+  }
+
   // Event listener
   onNumSidesChange(event) {
     this.numSides = event.target.value;
     this.getPoints();
   }
+
 
   // Connect all the points with lines
   draw() {
