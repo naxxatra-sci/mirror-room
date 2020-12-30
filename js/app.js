@@ -25,7 +25,7 @@ function setup() {
   window.mirror = new Mirror(initialConfig.mirrors, 400, origin); // numSides, length, origin
 
   // Setup Ball
-  window.ball = new Ball(origin.x, origin.y);
+  window.ball = new Ball(origin.x, origin.y,mirror.getLines());
   ball.setDirection(initialConfig.angle); // angle
   ball.setSpeed(initialConfig.speed);
 }
